@@ -127,6 +127,7 @@ public class SimpleServlet extends HttpServlet {
         final InputStream fileStream = request.getInputStream();
         ObjectMetadata metadata = new ObjectMetadata();
         metadata.setContentEncoding(mimeType);
+        metadata.setContentType(mimeType);
         _objStoreClient.createObject(_bucket_name, fileName, fileStream, metadata);
     }
 

@@ -7,7 +7,8 @@ export BASE_PATH
 if [ "$1" = "local" ] ; then
     BASE_PATH="http://localhost:998"
 else
-    BASE_PATH="https://beaware.uk-south.containers.mybluemix.net/object-store"
+#    BASE_PATH="https://beaware.uk-south.containers.mybluemix.net/object-store"
+    BASE_PATH="https://beaware-1.eu-de.containers.appdomain.cloud/object-store"
 fi
 
 
