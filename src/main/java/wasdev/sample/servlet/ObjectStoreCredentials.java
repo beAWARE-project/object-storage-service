@@ -1,87 +1,59 @@
 package wasdev.sample.servlet;
 
 /**
- * Created by evgeniyh on 4/8/18.
+ * Created by nirro@il.ibm.com on 13/12/18.
  */
 
 public class ObjectStoreCredentials {
-    private final String auth_url;
-    private final String project;
-    private final String projectId;
-    private final String region;
-    private final String userId;
-    private final String username;
-    private final String password;
-    private final String domainId;
-    private final String domainName;
-    private final String role;
+	private final String auth_endpoint;
+	private final String apikey;
+    private final String resource_instance_id;
+    private final String endpoint_url;
+    private final String endpoint_location;
+    private final String bucket_name;
 
-    public ObjectStoreCredentials(String auth_url, String project, String projectId, String region, String userId, String username, String password , String domainId, String domainName, String role) {
-        this.auth_url = auth_url;
-        this.project = project;
-        this.projectId = projectId;
-        this.region = region;
-        this.userId = userId;
-        this.username = username;
-        this.password = password;
-        this.domainId = domainId;
-        this.domainName = domainName;
-        this.role = role;
+    public ObjectStoreCredentials(String auth_endpoint, String apikey, String resource_instance_id, String endpoint_url, String endpoint_location, String bucket_name) {
+        this.auth_endpoint = auth_endpoint;
+    	this.apikey = apikey;
+        this.resource_instance_id = resource_instance_id;
+        this.endpoint_url = endpoint_url;
+        this.endpoint_location = endpoint_location;
+        this.bucket_name = bucket_name;
     }
 
-    public String getAuth_url() {
-        return auth_url;
+    public String getAuthEndpoint() {
+    	return auth_endpoint;
+    }
+    
+    public String getApikey() {
+        return apikey;
     }
 
-    public String getProject() {
-        return project;
+    public String getResource_instance_id() {
+        return resource_instance_id;
     }
-
-    public String getProjectId() {
-        return projectId;
+    
+    public String getEndpointUrl() {
+    	return endpoint_url;
     }
-
-    public String getRegion() {
-        return region;
+    
+    public String getEndpointLocation() {
+    	return endpoint_location;
     }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getDomainId() {
-        return domainId;
-    }
-
-    public String getDomainName() {
-        return domainName;
-    }
-
-    public String getRole() {
-        return role;
+    
+    public String getBucketName() {
+    	return bucket_name;
     }
 
     @Override
     public String toString() {
         return "ObjectStoreCredentials{" +
-                "auth_url='" + auth_url + '\'' +
-                ", project='" + project + '\'' +
-                ", projectId='" + projectId + '\'' +
-                ", region='" + region + '\'' +
-                ", userId='" + userId + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", domainId='" + domainId + '\'' +
-                ", domainName='" + domainName + '\'' +
-                ", role='" + role + '\'' +
+                "apikey='" + apikey + '\'' +
+                ", resource_instance_id='" + resource_instance_id + '\'' +
+                ", endpoint_url='" + endpoint_url + '\'' +
+                ", endpoint_location='" + endpoint_location + '\'' +
+                ", auth_endpoint='" + auth_endpoint + '\'' +
+                ", bucket_name='" + bucket_name + '\'' +
                 '}';
     }
 }
