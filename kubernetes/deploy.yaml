@@ -21,7 +21,7 @@ spec:
         app: object-store
     spec:
       containers:
-      - image: beaware/object-store:IMAGE_TAG
+      - image: beaware/object-store:V2
         imagePullPolicy: Always
         name: object-store
         env:
